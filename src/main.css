@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Luckiest+Guy&display=swap');
+
+:root {
+    --clr-black-800: hsl(0 0% 20%);
+    --clr-black-900: hsl(0 0% 0%);
+    --clr-white-800: hsl(0 0% 80%);
+    --clr-white-900: hsl(0 0% 100%);
+    --clr-primary-900: hsl(63 82% 56%);
+
+    --ff-logo: 'Luckiest Guy', cursive;
+    --ff-primary: 'Kanit', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+  
+    --rem-100: 1rem;
+    --rem-200: 2rem;
+    --rem-300: 3rem;
+
+    --em-100: 1em;
+    --em-200: 2em;
+    --em-300: 3em;
+
+  }
+  
+  html {
+      scroll-behavior: smooth;
+      scroll-padding-block-end: 10em;
+  }
+  
+  /* reset */
+  
+  *,
+  *::before,
+  *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  
+  body {
+      color: var(--clr-black-800);
+      font-family: var(--ff-primary);
+      font-family: var(--fw-light);
+  }
+  
+  a {
+      text-decoration: none;
+      color: var(--clr-black-800);
+  }
+  
+  ul {
+      list-style: none;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  article,
+  i
+  {
+      padding: 0;
+      margin: 0;
+  }
+  
+  /* utility class*/
+  
+  .grid {
+      display: grid;
+  }
+  
+  .flex {
+      display: flex;
+  }
+  
+  .text-center {
+      text-align: center;
+  }
+  
+  .btn--mood {
+      background: transparent;
+
+      border: 1px solid var(--clr-white-900);
+      border-radius: 100vmax;
+
+      padding-inline: var(--em-200);
+      padding-block: calc( var(--em-100) / 1.8);
+
+      color: var(--clr-white-800);
+  }
+
+  .btn--mood:hover,
+  .btn--mood:focus {
+      color: var(--clr-black-900);
+      background-color: var(--clr-primary-900);
+  }
+
+
+/* header */
+
+.header > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.header--overlay {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 100% 10%;
+}
+
+
+.nav-bar {
+    padding-block: var(--em-100);
+    padding-inline: var(--em-200) ;
+    background-color: hsl(0 0% 20% / 0.5);
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-logo {
+    flex: 1;
+
+    cursor: pointer;
+}
+
+.header--logo {
+    font-family: var(--ff-logo);
+    font-weight: var(--fw-regular);
+    color: var(--clr-primary-900);
+}
+
+.nav--content {
+    flex: 1;
+
+    justify-content: space-evenly;
+}
+  
+
+.nav--content a {
+    font-size: calc(var(--rem-100) * 1.1);
+    color: var(--clr-white-800);
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+.nav--content a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2em;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--clr-primary-900);
+
+    transition: width 400ms ease;
+}
+
+.nav--content a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-inline: calc(var(--em-300) * 4);
+    margin-block-start: calc(var(--em-300) * 5);
+    padding-block: var(--em-200);
+
+    background-color: hsl(0 0% 20% / 0.5);
+    color: var(--clr-white-800);
+
+    border-radius: 100vmax;
+}
+
+.header-text > * {
+    margin-block: calc(var(--em-100) / 3);
+}
+
+.header-text a {
+    font-size: var(--rem-100);
+}
+
+
+
+
+
+
+
+/* 
+
+padding-inline: calc(var(--em-300) * 2);
+
+*/
+
+
